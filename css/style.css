@@ -1,6 +1,6 @@
-* {
-  outline: 1px solid tomato--;
-}
+/* * {
+  outline: 1px solid tomato;
+} */
 
 #header {
   position: fixed;
@@ -26,15 +26,15 @@
   margin: 0 auto;
 }
 
-#gnb > ul {
+#gnb>ul {
   display: flex;
   gap: 20px;
 }
 
-#gnb > ul > li > a {
+#gnb>ul>li>a {
   display: block;
-  padding: 0 21px;
-  font-size: 17px;
+  padding: 0 22px;
+  font-size: 18px;
   font-weight: 500;
 }
 
@@ -65,27 +65,59 @@
   background: url(../images/main_visual04.jpg) no-repeat top center/cover;
 }
 
+.main_visual .itm .slogan {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  max-width: 1200px;
+  width: 100%;
+  padding: 0 15px;
+
+}
+
+.main_visual .itm .slogan h3 {
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 20px;
+  font-weight: 300;
+  letter-spacing: 0.5em;
+  color: #fff;
+  text-shadow: 0 0 5px #000;
+}
+
+.main_visual .itm .slogan span {
+  display: block;
+  align-items: center;
+  font-size: 17px;
+  font-weight: 500;
+  color: #fff;
+}
+
 .main_visual .arrows {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  max-width: 1600px;
+  max-width: 1650px;
   width: 100%;
 }
 
 .main_visual .arrows button {
   position: absolute;
 
-  background: #ffffff96;
-  border: 1px solid #ffffff77;
-  padding: 15px 15px;
+  background: transparent;
+  border: none;
+  /* padding: 5px 5px;
+  box-shadow: 3px 5px 10px gray; */
 }
 
 .main_visual .arrows button i {
-  font-size: 24px;
-  font-weight: 500;
-  color: #202124;
+  font-size: 50px;
+  font-weight: 300;
+  color: #fff;
+  text-shadow: 0 0 10px #000;
 }
 
 .main_visual .arrows .left {
@@ -96,44 +128,111 @@
   right: 0;
 }
 
+.roll_txt {
+  position: absolute;
+  top: -100px;
+  right: 100px;
+  width: 400px;
+  height: 400px;
+  font-size: 20px;
+  font-weight: 400;
+  text-transform: uppercase;
+
+  animation: roll 10s infinite linear;
+}
+
+@keyframes roll {
+  0% {
+    transform: rotate(0);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+
 /* visual_content */
 
 .visual_content {
   position: relative;
 }
 
-.visual_content .left {
+.flex_custom .itm {
   display: flex;
   align-items: center;
 }
 
-.visual_content .left .tit {
+/* .flex_custom .itm>* {
+  flex: 1;
+} */
+
+.flex_custom .itm .img_box {
+  width: 585px;
+  height: 380px;
+}
+
+.flex_custom .itm .tit {
+  margin: 0 auto;
+}
+
+.flex_custom .itm01 .img_box {
+  margin: 0 0 0 auto;
+  background: url(../images/visual_content04.jpg) no-repeat center 80%/cover;
+}
+
+
+.flex_custom .itm01 .tit h2 {
   font-family: "Noto Serif KR", serif;
-  text-align: left;
-  width: auto;
-}
-
-.visual_content .left .tit p {
   font-size: 32px;
-  font-weight: 600;
-  margin: 0 0 8px 0;
-  line-height: 37px;
+  font-weight: 700;
+  margin: 0 0 25px 0;
 }
 
-.visual_content .left .tit strong {
-  line-height: 20px;
+.flex_custom .itm01 .tit p {
+  font-family: 'Pretendard-Regular';
+  line-height: 22px;
+  word-break: break-all;
 }
+
+.flex_custom .itm02 .tit {
+  order: 1;
+  margin: 0 0 0 auto;
+}
+
+.flex_custom .itm02 .tit h2 {
+  font-family: "Noto Serif KR", serif;
+  font-size: 32px;
+  font-weight: 700;
+  margin: 0 0 25px 0;
+}
+
+.flex_custom .itm02 .tit p {
+  /* font-family: 'Pretendard-Regular'; */
+  line-height: 22px;
+  word-break: break-all;
+}
+
+
+.flex_custom .itm02 .img_box {
+  background: url(../images/visual_content08.jpg) no-repeat center center/cover;
+}
+
 
 /* -------------------------- */
+
+.visual_content {}
 
 .visual_content .right {
   display: flex;
   align-items: center;
 }
 
-.visual_content .right img {
-
+.visual_content .right .itm02 {
+  height: 300px;
+  background: url(../images/visual_content01.webp)no-repeat center center/cover;
 }
+
 
 .visual_content .right .tit {
   order: 2;
@@ -147,8 +246,119 @@
   font-weight: 600;
   margin: 0 0 8px 0;
   line-height: 37px;
+
 }
 
 .visual_content .right .tit strong {
+  /* font-family: 'Pretendard-Regular'; */
   line-height: 20px;
+
+}
+
+/* main_priduct */
+
+.main_product {
+  background: #fbf9f7;
+}
+
+.main_product .main_slide {
+  padding: 100px 0;
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+
+
+}
+
+.main_product .title {
+  padding: 0 0 15px 15px;
+}
+
+.main_product .title h2 {
+  font-family: "Noto Serif KR", serif;
+  font-size: 32px;
+  font-weight: 700;
+  margin: 0 0 15px 0;
+}
+
+.main_product .title p {}
+
+.main_product .pic_slide {
+  height: 400px;
+}
+
+
+.main_product .content {
+  display: flex;
+  gap: 30px;
+}
+
+.main_product .content>* {
+  flex: 1;
+  overflow: hidden;
+}
+
+.main_product .content img {
+  border: 1px solid #dddddd73;
+}
+
+.right {
+  position: relative;
+  overflow: hidden;
+}
+
+.main_product .product_slide {
+  margin: 0 -15px;
+}
+
+.main_product .product_slide figure {
+  margin: 0 8px;
+}
+
+.main_product .product_slide figure img {
+  height: 230px;
+  object-fit: cover;
+  margin: 0 0 10px 0;
+  border: 1px solid #dddddd73;
+}
+
+
+.main_product .product_slide strong {
+  display: block;
+  text-align: center;
+  font-size: 16px;
+  font-weight: 500;
+  margin: 0 0 5px 0;
+}
+
+.main_product .product_slide p {
+  display: block;
+  text-align: center;
+  font-size: 14px;
+  line-height: 18px;
+}
+
+.main_product .content .arrows {
+  position: absolute;
+  bottom: 0;
+  left: 40%;
+  transform: translate(0, 0);
+  z-index: 999;
+  display: flex;
+
+}
+
+.main_product .content .arrows i {
+  padding: 10px 20px;
+  font-size: 18px;
+  font-weight: 600;
+  background: transparent;
+  color: #000;
+}
+
+.main_product .content .arrows button {
+  border: none;
+  background: transparent;
+
+  /*<--- 이거말하는거아님???? */
 }

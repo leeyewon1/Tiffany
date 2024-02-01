@@ -16,6 +16,58 @@ $(function () {
     $('.main_visual .arrows .right').on('click', function () {
         $('.main_visual .itm_area').slick('slickNext');
     });
+
+    $('.product_slide').slick({
+        slidesToShow: 3,
+        asNavFor: ".pic_slide",
+        focusOnSelect: true,
+        arrows: true,
+        centerMode: true,
+        centerPadding: '10px',
+        // responsive: [
+        //     {
+        //         breakpoint: 768,
+        //         settings: {
+        //             slidesToShow: 1,
+        //         }
+        //     }
+        // ],
+        prevArrow: $('.content .arrows .left'),
+        nextArrow: $('.content .arrows .right'),
+    });
+
+    // $('.content .arrows .left').on('click', function () {
+    //     $('.pic_slide ').slick('slickPrev');
+    // });
+
+    // $('.content .arrows .right').on('click', function () {
+    //     $('.pic_slide').slick('slickNext');
+    // });
+
+    $('.pic_slide').slick({
+        vertical: true,
+        arrows: false,
+        asNavFor: ".product_slide",
+    });
+
+    // text-animation
+
+    const ITXT = $('.roll_txt').text().split('');
+    const CTXT = $.map(ITXT, (it) => `<span>${it}</span>`).join('');
+    const DTXT = $('.roll_txt').text('').append(CTXT).children();
+
+
+    $.each(DTXT, (idx, it) => {
+        $(it).css({
+            position: 'absolute',
+            top: 0,
+            left: '50%',
+            height: '100%',
+            transform: `rotate(${360 / DTXT.size() * idx}deg)`
+        })
+    })
+
+
 });
 
 
