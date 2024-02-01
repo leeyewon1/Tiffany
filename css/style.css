@@ -26,6 +26,11 @@
   margin: 0 auto;
 }
 
+/* #header .header_inner>*{
+  flex :1;
+  } */
+/* 이거에용 현명아^^ */
+
 #gnb > ul {
   display: flex;
   gap: 20px;
@@ -342,7 +347,7 @@
   font-size: 18px;
   font-weight: 600;
   background: transparent;
-  color: #000;
+  color: #2021246f;
 }
 
 .main_product .content .arrows button {
@@ -415,7 +420,7 @@
 }
 
 .main_portfolio .txt .btn:hover {
-  color: #fff;
+  color: #202124b1;
   background: #81d8d0;
   border: 1px solid #ddddddb6;
   transition: 0.5s;
@@ -443,3 +448,47 @@
 }
 
 
+#footer {}
+
+#footer {
+  background: #fbf9f7;
+}
+
+#footer .ft {
+  border-bottom: 1px solid #dddddd8f;
+}
+
+#footer .content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  height: 100px;
+}
+
+#footer .content ul {
+  display: flex;
+  align-items: center;
+}
+
+#footer .content li strong {
+  font-weight: 500;
+}
+
+#footer .content li~li::before {
+  content: "";
+  display: inline-block;
+  width: 1px;
+  height: 11px;
+  background: #ccc;
+  margin: 0 15px;
+}
+
+
+#footer #fl {
+  outline: none;
+  border: 1px solid #ddd;
+  padding: 5px 20px;
+  background: #81d8d0;
+  color: #fff;
+}
