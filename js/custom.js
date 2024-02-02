@@ -67,6 +67,21 @@ $(function () {
         })
     })
 
+    $(window).on('scroll', function () {
+        const scrollHeight = $(window).scrollTop();
+        console.log(scrollHeight);
+        if (scrollHeight > 0) {
+            $('.header').addClass('on')
+        } else {
+            $('.header').removeClass('on')
+        }
+    })
+
+    $('.mopen').on('click', function () {
+        $('#gnb').toggleClass('on');
+        $(this).find('.hamburger').toggleClass('is-active');
+    })
+
 
 });
 
