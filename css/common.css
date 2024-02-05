@@ -52,11 +52,11 @@
 }
 
 
-.title h2::before {
+/* .title h2::before {
     content: "";
     display: block;
     margin: 0 0 10px 0;
     width: 70px;
     height: 2px;
     background: var(--primary-color);
-}
+} */

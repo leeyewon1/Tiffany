@@ -32,8 +32,8 @@ $(function () {
         //         }
         //     }
         // ],
-        prevArrow: $('.content .arrows .left'),
-        nextArrow: $('.content .arrows .right'),
+        prevArrow: $('.main_product .arrows .left'),
+        nextArrow: $('.main_product .arrows .right'),
     });
 
     // $('.content .arrows .left').on('click', function () {

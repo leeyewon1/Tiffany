@@ -146,10 +146,12 @@
 
 .main_visual .itm01 {
   background: url(../images/main_visual03.jpg) no-repeat top center/cover;
+  clip-path: polygon(100% 0, 100% 90%, 0 100%, 0 0);
 }
 
 .main_visual .itm02 {
   background: url(../images/main_visual04.jpg) no-repeat top center/cover;
+  clip-path: polygon(100% 0, 100% 90%, 0 100%, 0 0);
 }
 
 .main_visual .itm .slogan {
@@ -271,6 +273,7 @@
 .flex_custom .itm .img_box {
   width: 585px;
   height: 380px;
+  border-radius: 50% 40%;
 }
 
 .flex_custom .itm .tit {
@@ -284,9 +287,18 @@
 
 .flex_custom .itm01 .tit h2 {
   font-family: "Noto Serif KR", serif;
-  font-size: 32px;
+  font-size: 70px;
   font-weight: 700;
   margin: 0 0 25px 0;
+
+
+}
+
+.flex_custom .itm01 .tit strong {
+  display: block;
+  color: transparent;
+  -webkit-text-stroke: 1px #333;
+  font-size: 120px;
 }
 
 .flex_custom .itm01 .tit p {
@@ -297,12 +309,22 @@
 
 .flex_custom .itm02 .tit {
   order: 1;
-  margin: 0 0 0 auto;
+  margin: 0 0 0 85px;
+
+}
+
+
+.flex_custom .itm02 .tit strong {
+  display: block;
+  color: transparent;
+  -webkit-text-stroke: 1px #333;
+  font-size: 120px;
+
 }
 
 .flex_custom .itm02 .tit h2 {
   font-family: "Noto Serif KR", serif;
-  font-size: 32px;
+  font-size: 70px;
   font-weight: 700;
   margin: 0 0 25px 0;
 }
@@ -463,6 +485,7 @@
 
 .main_product {
   background: #fbf9f7;
+  clip-path: polygon(100% 17%, 100% 100%, 0 100%, 0 0);
 }
 
 .main_product .main_slide {
@@ -473,12 +496,12 @@
 }
 
 .main_product .title {
-  padding: 0 0 15px 15px;
+  padding: 0 15px;
 }
 
 .main_product .title h2 {
   font-family: "Noto Serif KR", serif;
-  font-size: 32px;
+  font-size: 70px;
   font-weight: 700;
   margin: 0 0 20px 0;
 }
@@ -542,28 +565,32 @@
   line-height: 18px;
 }
 
-.main_product .content .arrows {
+.main_product .arrows {
   /* position: absolute;
   bottom: 0;
   left: 45%;
   transform: translate(0, 0);
   z-index: 999; */
   display: flex;
-  justify-content: center;
+  justify-content: flex-end;
+
 
 }
 
-.main_product .content .arrows i {
-  padding: 10px 10px;
+.main_product .arrows i {
+  padding: 5px 5px;
   font-size: 18px;
   font-weight: 600;
   background: transparent;
-  color: #2021246f;
+
+
 }
 
-.main_product .content .arrows button {
-  border: none;
+.main_product .slick-arrow {
+  border: 1px solid #000;
   background: transparent;
+  border-radius: 50%;
+
 
   /*<--- 이거말하는거아님???? */
 }
@@ -684,7 +711,7 @@
 
 .main_portfolio .title h2 {
   font-family: "Noto Serif KR", serif;
-  font-size: 32px;
+  font-size: 70px;
   text-align: left;
   font-weight: 700;
   margin: 0 0 20px 0;
@@ -822,7 +849,7 @@
 .main_banner .txt_area h2 {
   font-family: "Noto Serif KR", serif;
   font-weight: 100;
-  font-size: 32px;
+  font-size: 28px;
   text-align: center;
   color: #000000a6;
   line-height: 73px;
