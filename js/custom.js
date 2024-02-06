@@ -50,11 +50,20 @@ $(function () {
         asNavFor: ".product_slide",
     });
 
+
     // text-animation
 
     const ITXT = $('.roll_txt').text().split('');
     const CTXT = $.map(ITXT, (it) => `<span>${it}</span>`).join('');
     const DTXT = $('.roll_txt').text('').append(CTXT).children();
+
+
+    $('#movie_box').YTPlayer({
+        videoURL: 'https://youtu.be/UHVrQbrp_rg',
+        containment: '.Movie .play_box .content',
+        showControls: false,
+        playOnlyIfVisible: true,
+    });
 
 
     $.each(DTXT, (idx, it) => {
@@ -84,5 +93,4 @@ $(function () {
 
 
 });
-
 

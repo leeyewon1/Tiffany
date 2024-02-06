@@ -1,6 +1,6 @@
-/* * {
-  outline: 1px solid tomato;
-} */
+* {
+  outline: 1px solid tomato--;
+}
 
 #header {
   position: fixed;
@@ -74,6 +74,10 @@
   line-height: 80px;
 }
 
+#header.on .header_inner {
+  filter: invert() brightness(2);
+}
+
 @media (max-width: 768px) {
   #header h1 {
     position: fixed;
@@ -141,7 +145,7 @@
 
 .main_visual .itm {
   position: relative;
-  height: 90vh;
+  height: 100vh;
 }
 
 .main_visual .itm01 {
@@ -218,15 +222,45 @@
 
 .roll_txt {
   position: absolute;
-  top: -100px;
-  right: 100px;
-  width: 400px;
-  height: 400px;
-  font-size: 20px;
+  top: -200px;
+  right: 150px;
+  width: 300px;
+  height: 300px;
+  font-size: 12px;
   font-weight: 400;
   text-transform: uppercase;
 
-  animation: roll 10s infinite linear;
+  animation: roll 20s infinite linear;
+}
+
+.roll_txt span:nth-child(even) {
+  font-weight: 700;
+}
+
+.roll_txt::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 120%;
+  height: 120%;
+  border: 0px solid rgba(255, 255, 255, 0.3);
+  outline: 1px solid #ddd;
+  border-radius: 50%;
+  box-sizing: border-box;
+}
+
+.roll_txt::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: url(../images/logo.svg) no-repeat center center/contain;
+  width: 150px;
+  height: 150px;
+  box-sizing: border-box;
 }
 
 @keyframes roll {
@@ -273,7 +307,6 @@
 .flex_custom .itm .img_box {
   width: 585px;
   height: 380px;
-  border-radius: 50% 40%;
 }
 
 .flex_custom .itm .tit {
@@ -296,14 +329,20 @@
 
 .flex_custom .itm01 .tit strong {
   display: block;
+  font-family: "Pretendard";
+  font-weight: 900;
+  display: block;
   color: transparent;
-  -webkit-text-stroke: 1px #333;
-  font-size: 120px;
+  -webkit-text-stroke: 1px rgb(51, 51, 51);
+  line-height: 35px;
+  font-size: 100px;
 }
 
 .flex_custom .itm01 .tit p {
   font-family: "Pretendard-Regular";
-  line-height: 22px;
+  font-size: 15px;
+  line-height: 20px;
+  font-weight: 100;
   word-break: keep-all;
 }
 
@@ -318,7 +357,8 @@
   display: block;
   color: transparent;
   -webkit-text-stroke: 1px #333;
-  font-size: 120px;
+  line-height: 12px;
+  font-size: 100px;
 
 }
 
@@ -331,7 +371,9 @@
 
 .flex_custom .itm02 .tit p {
   font-family: 'Pretendard-Regular';
-  line-height: 22px;
+  font-size: 15px;
+  line-height: 20px;
+  font-weight: 100;
   word-break: break-all;
 }
 
@@ -481,11 +523,38 @@
   }
 }
 
+/* Movie */
+
+.Movie {}
+
+.Movie h2 {
+  font-family: "Noto Serif KR", serif;
+  text-align: center;
+  font-size: 40px;
+  font-weight: 700;
+  margin: 0 0 20px 0;
+}
+
+
+.Movie .play_box {
+  display: flex;
+  height: 500px;
+}
+
+.Movie .play_box .content {
+  background: tomato;
+  width: 100%;
+  height: 500px;
+  clip-path: circle(50% at 50% 50%);
+}
+
+
+
 /* main_priduct */
 
 .main_product {
   background: #fbf9f7;
-  clip-path: polygon(100% 17%, 100% 100%, 0 100%, 0 0);
+  clip-path: polygon(0 0, 100% 9%, 100% 100%, 0 90%);
 }
 
 .main_product .main_slide {
@@ -501,7 +570,7 @@
 
 .main_product .title h2 {
   font-family: "Noto Serif KR", serif;
-  font-size: 70px;
+  font-size: 45px;
   font-weight: 700;
   margin: 0 0 20px 0;
 }
@@ -549,16 +618,16 @@
 }
 
 .main_product .product_slide strong {
-  font-family: 'Pretendard-Regular';
+  /* font-family: 'Pretendard-Regular'; */
   display: block;
   text-align: center;
   font-size: 16px;
-  font-weight: 500;
+  font-weight: 600;
   margin: 0 0 5px 0;
 }
 
 .main_product .product_slide p {
-  font-family: 'Pretendard-Regular';
+  /* font-family: 'Pretendard-Regular'; */
   display: block;
   text-align: center;
   font-size: 14px;
@@ -566,11 +635,6 @@
 }
 
 .main_product .arrows {
-  /* position: absolute;
-  bottom: 0;
-  left: 45%;
-  transform: translate(0, 0);
-  z-index: 999; */
   display: flex;
   justify-content: flex-end;
 
@@ -579,17 +643,20 @@
 
 .main_product .arrows i {
   padding: 5px 5px;
-  font-size: 18px;
+  font-size: 17px;
   font-weight: 600;
+
   background: transparent;
 
 
 }
 
 .main_product .slick-arrow {
-  border: 1px solid #000;
+  border: 1px solid #ddd;
+  color: #202124;
   background: transparent;
-  border-radius: 50%;
+  border-radius: 10%;
+  margin: 0 0 5px 0;
 
 
   /*<--- 이거말하는거아님???? */
@@ -681,14 +748,6 @@
     line-height: 18px;
   }
 
-  /* .main_product .content .arrows {
-    position: absolute;
-    bottom: 0;
-    left: 40%;
-    transform: translate(0, 0);
-    z-index: 999;
-    display: flex;
-  } */
 
   .main_product .content .arrows i {
     padding: 10px 10px;
@@ -709,16 +768,21 @@
   }
 }
 
+.main_portfolio {
+  clip-path: polygon(100% 17%, 100% 100%, 0 100%, 0 0);
+}
+
 .main_portfolio .title h2 {
   font-family: "Noto Serif KR", serif;
-  font-size: 70px;
-  text-align: left;
+  font-size: 45px;
+  text-align: center;
   font-weight: 700;
   margin: 0 0 20px 0;
 }
 
 .main_portfolio .title p {
   margin: 0 0 15px 0;
+  text-align: center;
   font-family: "Pretendard-Regular";
 }
 
@@ -741,7 +805,7 @@
 }
 
 .main_portfolio .grid_container img {
-  margin: 0 0 15px 0;
+  margin: 0 0 50px 0;
 }
 
 .main_portfolio .txt {
@@ -761,7 +825,7 @@
   font-size: 15px;
   font-weight: 400;
   line-height: 21px;
-  margin: 0 0 16px 0;
+  margin: 0 0 40px 0;
 }
 
 .main_portfolio .txt .btn {
@@ -778,6 +842,13 @@
   background: #81d8d0;
   border: 1px solid #ddddddb6;
   transition: 0.5s;
+
+}
+
+.main_portfolio .txt .btn:hover::before {
+  opacity: 1;
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
 }
 
 .main_portfolio .txt .btn i {
@@ -843,16 +914,15 @@
 .main_banner {
   background:
     url(../images/main_banner05.jpg) no-repeat bottom/cover;
-  height: 250px;
+  height: 100px;
 }
 
 .main_banner .txt_area h2 {
   font-family: "Noto Serif KR", serif;
-  font-weight: 100;
+  font-weight: 500;
   font-size: 28px;
   text-align: center;
   color: #000000a6;
-  line-height: 73px;
 }
 
 @media (max-width: 768px) {
